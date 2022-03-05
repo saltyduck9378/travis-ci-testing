@@ -1,0 +1,16 @@
+language: php
+php: 
+    - '5.6'
+    
+branches:
+    only: new-branch
+    
+job:
+    include:
+        - stage: test
+          script:
+           - echo 'start testing'
+           - ./test.php
+        - stage: build
+        - stage: deploy
+        
