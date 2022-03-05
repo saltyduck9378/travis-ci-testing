@@ -10,7 +10,7 @@ job:
         - stage: test
           script:
            - echo 'start testing'
-           - ./test.php
+           - test.php
         - stage: build
         - stage: deploy
         
