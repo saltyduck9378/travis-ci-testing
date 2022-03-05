@@ -2,7 +2,7 @@
 <phpunit colors="true">
     <testsuites>
         <testsuite name="Test Travis CI">
-            <directory suffix='.php'>./</directory>
+            <directory suffix='.php'>./View</directory>
         </testsuite>
     </testsuites>
     
