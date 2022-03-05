@@ -1,16 +1,14 @@
 language: php
 php: 
-    - '5.6'
+    - '7.1'
     
 branches:
     only: new-branch
     
-job:
-    include:
-        - stage: test
-          script:
-           - echo 'start testing'
-           - test.php
-        - stage: build
-        - stage: deploy
+before_script: 
+    - composer self-update
+    -composer install -prefer-source --no-interaction --dev
+    
+script: phpunit
+    
         
